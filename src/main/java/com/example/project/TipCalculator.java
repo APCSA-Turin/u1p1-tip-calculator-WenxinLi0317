@@ -7,15 +7,15 @@ public class TipCalculator {
         StringBuilder result = new StringBuilder();
 
                     
-
+        //I use this link to help me round:https://stackoverflow.com/questions/8825209/rounding-decimal-points"
         result.append("-------------------------------\n");
-        result.append("Total bill before tip: $"+ cost); //concatenate to this string. DO NOT ERASE AND REWRITE
-        result.append("Total percentage: " + percent + '%');
-        result.append("Total tip: $" + (Math.round((cost*((double)percent/100.00)))*100.00)/100.00);
-        result.append("Total Bill with tip:$ " +(cost+cost*((double)percent/100)));
-        result.append("Per person cost before tip:$ " +(cost/people));
-        result.append("Tip per person:$ " + (cost*((double)percent/100)/people));
-        result.append("Total cost per person:$ "+((cost+cost*((double)percent/100)/people)));
+        result.append("Total bill before tip: $"+ cost +"\n"); //concatenate to this string. DO NOT ERASE AND REWRITE
+        result.append("Total percentage: " + percent + '%' +"\n");
+        result.append("Total tip: $" + Math.round((cost*((double)percent/100.00))*100.00)/100.00+"\n");
+        result.append("Total Bill with tip: $" + Math.round((cost+cost*((double)percent/100))*100.00)/100.00+"\n");
+        result.append("Per person cost before tip: $" +Math.round((cost/people)*100.00)/100.00+"\n");
+        result.append("Tip per person: $" + Math.round((cost*((double)percent/100)/people)*100.00)/100.00+"\n");
+        result.append("Total cost per person: $"+Math.round((((cost+cost*((double)percent/100))/people))*100.00)/100.00+"\n");
         result.append("-------------------------------\n");
         return result.toString();
     }
